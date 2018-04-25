@@ -1,15 +1,28 @@
 package com.kupirng.file.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Persons {
-    private List<Person> persons;
+    private ArrayList<Person> persons;
 
-    public List<Person> getPersons() {
+    public Persons() {
+        this.persons = new ArrayList<Person>();
+    }
+
+    public ArrayList<Person> getPersons() {
         return persons;
     }
 
-    public void setPersons(List<Person> persons) {
+    public void setPersons(ArrayList<Person> persons) {
         this.persons = persons;
+    }
+
+    public void add(Person person) {
+        this.persons.add(person);
+    }
+
+    public void addAll(ArrayList<Person> persons) {
+        this.persons.addAll(persons);
     }
 }
