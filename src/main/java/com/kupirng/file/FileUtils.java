@@ -30,8 +30,26 @@ public class FileUtils {
         System.out.println("Finish. Total time: " + (end - start) + "\n");
 
         start = System.currentTimeMillis();
-        System.out.println("Start get : " + start);
+        System.out.println("Start get 8888 : " + start);
         FileUtils.get(8888);
+        end = System.currentTimeMillis();
+        System.out.println("Finish. Total time: " + (end - start) + "\n");
+
+        start = System.currentTimeMillis();
+        System.out.println("Start get 9991 : " + start);
+        FileUtils.get(9991);
+        end = System.currentTimeMillis();
+        System.out.println("Finish. Total time: " + (end - start) + "\n");
+
+        start = System.currentTimeMillis();
+        System.out.println("Start get 23 : " + start);
+        FileUtils.get(23);
+        end = System.currentTimeMillis();
+        System.out.println("Finish. Total time: " + (end - start) + "\n");
+
+        start = System.currentTimeMillis();
+        System.out.println("Start get 456 : " + start);
+        FileUtils.get(456);
         end = System.currentTimeMillis();
         System.out.println("Finish. Total time: " + (end - start) + "\n");
 
@@ -50,16 +68,15 @@ public class FileUtils {
         end = System.currentTimeMillis();
         System.out.println("Finish. Total time: " + (end - start) + "\n");
 
-//        start = System.currentTimeMillis();
-//        System.out.println("Start appendPersons : " + start);
-//        FileUtils.appendPersons(persons);
-//        end = System.currentTimeMillis();
-//        System.out.println("Finish. Total time: " + (end - start) + "\n");
+        start = System.currentTimeMillis();
+        System.out.println("Start appendPersons : " + start);
+        FileUtils.appendPersons(persons);
+        end = System.currentTimeMillis();
+        System.out.println("Finish. Total time: " + (end - start) + "\n");
 
     }
 
     public static Person get(int id) throws IOException {
-        //need tuning
         Path path = Paths.get("/Users/Gooooogolf/temp", "output.json");
         try (Stream<String> lines = Files.lines(path)) {
             Gson gson = new GsonBuilder().create();
@@ -197,7 +214,6 @@ public class FileUtils {
             reader.endArray();
             reader.close();
             writer.close();
-
 
         } catch (UnsupportedEncodingException ex) {
             ex.printStackTrace();
